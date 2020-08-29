@@ -1,5 +1,5 @@
-import { IUsersRepository } from "../IUsersRepository";
-import { User } from "../../entities/Users";
+import { IUsersRepository } from '../IUsersRepository';
+import { User } from '../../entities/Users';
 
 export class FakeUsersRepository implements IUsersRepository {
   private users: User[] = [];
@@ -10,7 +10,5 @@ export class FakeUsersRepository implements IUsersRepository {
     return user;
   }
 
-  async save(user: User): Promise<void> {
-
-  }
+  async save(user: User): Promise<void> {}
 }
