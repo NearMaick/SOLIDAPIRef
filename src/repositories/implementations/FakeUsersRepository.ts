@@ -5,9 +5,9 @@ export class FakeUsersRepository implements IUsersRepository {
   private users: User[] = [];
 
   async findByEmail(email: string): Promise<User | undefined> {
-    const user = this.users.find(user => user.email === email);
+    const userFound = this.users.find(user => user.email === email);
 
-    return user;
+    return userFound;
   }
 
   async save(user: User): Promise<void> {}
