@@ -10,5 +10,7 @@ export class FakeUsersRepository implements IUsersRepository {
     return userFound;
   }
 
-  async save(user: User): Promise<void> {}
+  async save(user: User): Promise<void> {
+    this.users.push(user);
+  }
 }
